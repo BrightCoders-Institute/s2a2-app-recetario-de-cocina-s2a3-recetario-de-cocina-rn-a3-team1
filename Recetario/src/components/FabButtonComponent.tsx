@@ -7,6 +7,7 @@ import {
   StyleSheet,
 } from 'react-native';
 import React from 'react';
+import Icon from 'react-native-vector-icons/Ionicons';
 
 interface Props {
   iconName: string;
@@ -23,7 +24,11 @@ const FabButtonComponent = (props: Props) => {
     <TouchableOpacity
       activeOpacity={0.8}
       onPress={onPress}
-      style={[stylesFab.fabButton]}></TouchableOpacity>
+      style={[
+        {...stylesFab.fabButton, backgroundColor: background ?? 'white'},
+      ]}>
+      <Icon name={iconName} size={iconSize ?? 25} color="black" />
+    </TouchableOpacity>
   );
 };
 
