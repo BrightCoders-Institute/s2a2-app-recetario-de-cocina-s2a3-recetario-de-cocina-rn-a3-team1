@@ -3,7 +3,7 @@ import React from 'react';
 
 const DishesScreen = () => {
   return (
-    <View>
+    <View style={{ flex:1}}>
       <Text>DetailScreen</Text>
     </View>
   );

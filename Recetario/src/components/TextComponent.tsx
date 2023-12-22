@@ -3,6 +3,7 @@ import React, {useContext} from 'react';
 
 interface Props {
   text: string | any;
+  align?: string | any;
   color?: string;
   size?: number;
   flex?: number;
@@ -23,7 +24,7 @@ interface Props {
 }
 
 const TextComponent = (props: Props) => {
-  const {text, color, size, flex, styles, font} = props;
+  const {text, color, size, flex, styles, font, align} = props;
   return (
     <Text
       style={[
@@ -32,6 +33,7 @@ const TextComponent = (props: Props) => {
           fontSize: size ?? 15,
           flex: flex ?? 0,
           fontWeight: font,
+          textAlign: align,
         },
         styles,
       ]}>
