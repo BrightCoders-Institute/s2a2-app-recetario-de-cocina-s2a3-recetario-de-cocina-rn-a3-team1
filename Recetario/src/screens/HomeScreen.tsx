@@ -27,7 +27,7 @@ const HomeScreen = () => {
           keyExtractor={dishes => dishes.id}
           horizontal
           showsHorizontalScrollIndicator={false}
-          renderItem={({ item }) => <DishesCardComponent dishes={item} imageHeight={200} imageWidth={150} cardRight={30} CardHeight={220} CardWidth={170}/>}
+          renderItem={({ item }) => <DishesCardComponent dishes={item} imageHeight={200} imageWidth={165} CardHeight={220} CardWidth={165}/>}
         />
         </View>
     </ContainerComponent>
