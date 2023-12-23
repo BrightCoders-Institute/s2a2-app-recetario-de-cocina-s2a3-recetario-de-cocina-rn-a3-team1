@@ -1,57 +1,74 @@
 import {
-  View,
-  Text,
+  StyleSheet,
   StyleProp,
   ViewStyle,
   TouchableOpacity,
-  StyleSheet,
+  View,
 } from 'react-native';
-import React from 'react';
+import React, {useContext} from 'react';
 import Icon from 'react-native-vector-icons/Ionicons';
+import {RowComponent, TextComponent} from '.';
 
 interface Props {
+  pTop?: number;
+  pLeft?: number;
+  pRight?: number;
+  pBottom?: number;
   iconName: string;
-  iconSize: number;
-  onPress: () => void;
+  iconSize?: number;
+  iconColor?: string;
+  onPress?: () => void;
   background?: string;
-  styles?: StyleProp<ViewStyle>;
+  onRadius?: number;
 }
 
 const FabButtonComponent = (props: Props) => {
-  const {iconName, iconSize, onPress, background, styles} = props;
+  const {
+    iconName,
+    iconSize,
+    onPress,
+    background,
+    iconColor,
+    pTop,
+    pLeft,
+    pRight,
+    pBottom,
+  } = props;
 
   return (
-    <TouchableOpacity
-      activeOpacity={0.8}
-      onPress={onPress}
-      style={[
-        {...stylesFab.fabButton, backgroundColor: background ?? 'white'},
-      ]}>
-      <Icon name={iconName} size={iconSize ?? 25} color="black" />
-    </TouchableOpacity>
-  );
+
+    <View
+    style={{
+      ...stylesFab.fabButton,
+      backgroundColor: background ?? '',
+      bottom: pBottom,
+      right: pRight,
+      left: pLeft,
+      top: pTop,
+    }}>
+      <TouchableOpacity activeOpacity={0.8} onPress={onPress}>
+        <Icon
+          name={iconName}
+          color={iconColor ?? 'white'}
+          size={iconSize ?? 25}
+          />
+      </TouchableOpacity>
+    </View>
+  )
 };
 
 export const stylesFab = StyleSheet.create({
   fabButton: {
-    width: 50,
     aspectRatio: 1 / 1,
     alignItems: 'center',
+    width: 40,
+    height: 40,
     justifyContent: 'center',
     borderRadius: 100,
     zIndex: 100,
     position: 'absolute',
 
-    shadowColor: '#000',
-    shadowOffset: {
-      width: 0,
-      height: 3,
-    },
-    shadowOpacity: 0.27,
-    shadowRadius: 4.65,
-
-    elevation: 4,
-  },
+  }
 });
 
 export default FabButtonComponent;

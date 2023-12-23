@@ -3,6 +3,7 @@ import DishesCardComponent from './DishesCardComponent';
 import FabButtonComponent from './FabButtonComponent';
 import TextComponent from './TextComponent';
 import SearchInputComponent from './SearchInputComponent';
+import RowComponent from './RowComponent'
 
 export {
   ContainerComponent,
@@ -10,4 +11,5 @@ export {
   FabButtonComponent,
   TextComponent,
   SearchInputComponent,
+  RowComponent,
 }
