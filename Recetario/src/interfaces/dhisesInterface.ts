@@ -1,14 +1,14 @@
 export interface SimpleDishes {
   id: string,
   name:string,
-  picture?: string,
+  picture?: any,
 }
 
 export interface FullDishes {
   id: string,
-  name:string,
-  picture?: string,
-  ingredient: Ingredients[]
+  name: string,
+  picture: any,
+  ingredients: Ingredients[];
 }
 
 export interface Ingredients {

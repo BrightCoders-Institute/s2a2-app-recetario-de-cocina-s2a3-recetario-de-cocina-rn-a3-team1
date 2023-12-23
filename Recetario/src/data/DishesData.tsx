@@ -1,109 +1,124 @@
-// import food1 from '../img/food-1.jpg'
-
 export const DishesData = [
   {
-    id: '1',
-    name: 'comida 1',
-    // picture: food1,
-    picture: '../img/food-1.jpg',
+    id: "1",
+    name: "Taco",
+    picture: require('../img/food-1.jpg'),
+    ingredients: [
+      {
+        one: 'Tortilla',
+        two: 'carne',
+        three: 'cebolla',
+        four: 'cilantro'
+      }
+    ] 
+  },
+  {
+    id: "2",
+    name: "Pizza",
+    picture: require('../img/food-2.jpg'),
     ingredients: [{
-      one: 'puff pasty',
-      two: 'peperoni',
-      three: 'marinada sauce',
+      one: 'Dough',
+      two: 'cheese',
+      three: 'tomato',
+      four: 'sauce',
+      five: 'toppings',
     }]
   },
   {
-    id: '2',
-    name: 'comida 2',
-    picture: '../img/food-2.jpg',
-    ingredients: [{
-      one: 'puff pasty',
-      two: 'peperoni',
-      three: 'marinada sauce',
+    id: "3",
+    name: "Sushi",
+    picture: require('../img/food-3.jpg'),
+    ingredients:[{
+      one: 'Rice',
+      two: 'fish',
+      three: 'seaweed',
+      four: 'soy',
+      five: 'sauce',
     }]
   },
   {
-    id: '3',
-    name: 'comida 3',
-    picture: '../img/food-3.jpg',
+    id: "4",
+    name: "Burger",
+    picture: require('../img/food-4.jpg'),
     ingredients: [{
-      one: 'puff pasty',
-      two: 'peperoni',
-      three: 'marinada sauce',
+      one: 'Bun',
+      two: 'beef',
+      three: 'patty',
+      four: 'lettuce',
+      five: 'tomato',
+      six: 'onion',
+    }] 
+  },
+  {
+    id: "5",
+    name: "Pasta",
+    picture: require('../img/food-5.jpg'),
+    ingredients: [{
+      one: 'Noodles', 
+      two: 'sauce',
+      three: 'meat',
+      four: 'vegetables',
     }]
   },
   {
-    id: '4',
-    name: 'comida 4',
-    picture: '../img/food-4.jpg',
+    id: "6",
+    name: "Curry",
+    picture: require('../img/food-6.jpg'),
     ingredients: [{
-      one: 'puff pasty',
-      two: 'peperoni',
-      three: 'marinada sauce',
+      one: 'Rice',
+      two: 'curry',
+      three: 'sauce',
+      four: 'meat',
+      five: 'vegetables',
     }]
   },
   {
-    id: '5',
-    name: 'comida 5',
-    picture: '../img/food-5.jpg',
+    id: "7",
+    name: "Sashimi",
+    picture: require('../img/food-7.jpg'),
     ingredients: [{
-      one: 'puff pasty',
-      two: 'peperoni',
-      three: 'marinada sauce',
+      one: 'Raw',
+      two: 'fish',
+      three: 'soy',
+      four: 'sauce',
+      five: 'wasabi',
     }]
   },
   {
-    id: '6',
-    name: 'comida 6',
-    picture: '../img/food-6.jpg',
-    ingredients: [{
-      one: 'puff pasty',
-      two: 'peperoni',
-      three: 'marinada sauce',
+    id: "8",
+    name: "Steak",
+    picture: require('../img/food-8.jpg'),
+    ingredients:[{
+      one: 'Beef',
+      two: 'seasoning',
     }]
   },
   {
-    id: '7',
-    name: 'comida 7',
-    picture: '../img/food-7.jpg',
-    ingredients: [{
-      one: 'puff pasty',
-      two: 'peperoni',
-      three: 'marinada sauce',
+    id: "9",
+    name: "Chow Mein",
+    picture: require('../img/food-9.jpg'),
+    ingredients:[{
+      one: 'Noodles',
+      two: 'meat',
+      three:'vegetables',
+      four: 'soy',
+      five: 'sauce',
     }]
   },
   {
-    id: '8',
-    name: 'comida 8',
-    picture: '../img/food-8.jpg',
+    id: "10",
+    name: "Paella",
+    picture: require('../img/food-10.jpg'),
     ingredients: [{
-      one: 'puff pasty',
-      two: 'peperoni',
-      three: 'marinada sauce',
+      one: 'Rice',
+      two: 'seafood',
+      three:'saffron',
+      four: 'vegetables',
     }]
-  },
-  {
-    id: '9',
-    name: 'comida 9',
-    picture: '../img/food-9.jpg',
-    ingredients: [{
-      one: 'puff pasty',
-      two: 'peperoni',
-      three: 'marinada sauce',
-    }]
-  },
-  {
-    id: '10',
-    name: 'comida 10',
-    picture: '../img/food-10.jpg',
-    ingredients: [{
-      one: 'puff pasty',
-      two: 'peperoni',
-      three: 'marinada sauce',
-    }]
-  },
-
+  }
 ]
+
+
 
 
 
