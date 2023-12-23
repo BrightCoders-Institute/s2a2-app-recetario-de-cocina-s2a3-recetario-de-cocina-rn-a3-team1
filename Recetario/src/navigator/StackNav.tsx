@@ -2,8 +2,14 @@ import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 import {DishesScreen, HomeScreen} from '../screens';
+import { SimpleDishes } from '../interfaces/dhisesInterface';
 
-const Stack = createStackNavigator();
+export type RootStackParams = {
+  HomeScreen: undefined;
+  DishesScreen: {simpleDishes: SimpleDishes}
+}
+
+const Stack = createStackNavigator<RootStackParams>();
 
 export const  StackNav = () => {
   return (
@@ -16,7 +22,7 @@ export const  StackNav = () => {
           }
         }}>
         <Stack.Screen name="HomeScreen" component={HomeScreen} />
-        <Stack.Screen name="DishedScreen" component={DishesScreen} />
+        <Stack.Screen name="DishesScreen" component={DishesScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
