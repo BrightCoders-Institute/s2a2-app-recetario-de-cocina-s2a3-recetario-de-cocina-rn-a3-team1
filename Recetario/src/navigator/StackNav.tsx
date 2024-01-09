@@ -2,11 +2,11 @@ import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 import {DishesScreen, HomeScreen} from '../screens';
-import { SimpleDishes } from '../interfaces/dhisesInterface';
+import { SimpleDishes, FullDishes } from '../interfaces/dhisesInterface';
 
 export type RootStackParams = {
   HomeScreen: undefined;
-  DishesScreen: {simpleDishes: SimpleDishes}
+  DishesScreen: {simpleDishes: FullDishes}
 }
 
 const Stack = createStackNavigator<RootStackParams>();

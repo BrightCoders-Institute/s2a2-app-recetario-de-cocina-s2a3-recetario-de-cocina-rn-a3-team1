@@ -8,13 +8,14 @@ export interface FullDishes {
   id: string,
   name: string,
   picture: any,
-  ingredients: Ingredients[];
+  ingredients: [];
+  portions: [];
 }
 
-export interface Ingredients {
-  one: string,
-  two: string,
-  three: string,
-  four?: string,
-  five?: string
-}
+// export interface Ingredients {
+//   one: string,
+//   two: string,
+//   three: string,
+//   four?: string,
+//   five?: string
+// }
