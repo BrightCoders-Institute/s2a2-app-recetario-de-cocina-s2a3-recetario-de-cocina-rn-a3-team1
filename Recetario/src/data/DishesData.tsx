@@ -3,139 +3,82 @@ export const DishesData = [
     id: "1",
     name: "Peperoni Pizza Pockets",
     picture: require('../img/food-1.jpg'),
-    ingredients: [{
-      one: 'puff pastry',
-      two: 'peperoni',
-      three: 'marinada sauce',
-      four: 'sherdded mozzarella cheese',
-      five: 'egg, for egg wash',
-    }]
+    ingredients: [ 'puff pastry','peperoni','marinada sauce','mozzarella cheese','egg, for egg wash'],
+    portions: ['1 sheet','15 slices','1 cup ','1/2 cup ','1']
+
   },
   {
     id: "2",
     name: "Chocolate Chip",
     picture: require('../img/food-2.png'),
     ingredients: [
-      {
-        one: 'all-purpose flour',
-        two: 'baking soda',
-        three: 'salt',
-        four: 'unsalted butter, softened',
-        five: 'granulated sugar',
-        six: 'brown sugar, packed',
-      }
+      'all-purpose flour','baking soda','salt', 'unsalted butter, softened', 'granulated sugar','brown sugar, packed'
     ] 
   },
   {
     id: "3",
     name: "Pancake Cups",
     picture: require('../img/food-3.jpg'),
-    ingredients:[{
-      one: 'pancake mix',
-      two: 'milk',
-      three: 'eggs',
-      four: 'maple syrup',
-      five: 'butter, melted',
-      six: 'your favorite pancake toppings (e.g., berries, whipped cream)',
-    }]
+    ingredients:[
+      'pancake mix','milk','eggs','maple syrup','butter, melted','your favorite pancake toppings (e.g., berries, whipped cream)',]
   },
   {
     id: "4",
     name: "Meatball Sub Bake",
     picture: require('../img/food-4.jpg'),
-    ingredients:[{
-      one: 'frozen meatballs',
-      two: 'sub rolls, sliced',
-      three: 'marinara sauce',
-      four: 'shredded mozzarella cheese',
-      five: 'Parmesan cheese, grated',
-      six: 'garlic powder',
-    }]
+    ingredients:['frozen meatballs','sub rolls, sliced','marinara sauce','shredded mozzarella cheese','Parmesan cheese, grated','garlic powder',
+    ]
   },
   {
     id: "5",
     name: "Enfrijoladas",
     picture: require('../img/food-5.jpg'),
-    ingredients: [{
-      one: 'corn tortillas',
-      two: 'black beans, cooked and mashed',
-      three: 'onion, finely chopped',
-      four: 'garlic, minced',
-      five: 'epazote (optional)',
-      six: 'queso fresco, crumbled',
-    }] 
+    ingredients: ['corn tortillas','black beans, cooked and mashed','onion, finely chopped','garlic, minced','epazote (optional)','queso fresco, crumbled',
+    ] 
   },
   {
     id: "6",
     name: "Fried Tacos",
     picture: require('../img/food-6.jpg'),
-    ingredients: [{
-      one: 'corn tortillas',
-      two: 'shredded chicken or beef',
-      three: 'vegetable oil',
-      four: 'lettuce, shredded',
-      five: 'tomato, diced',
-      six: 'onion, finely chopped',
-    }]
+    ingredients: [
+      'corn tortillas','shredded chicken or beef','vegetable oil','lettuce, shredded','tomato, diced','onion, finely chopped',
+    ]
   },
   {
     id: "7",
     name: "Quesadillas",
     picture: require('../img/food-7.jpg'),
-    ingredients: [{
-      one: 'flour tortillas',
-      two: 'shredded cheese (e.g., cheddar, Monterey Jack)',
-      three: 'cooked chicken, diced (optional)',
-      four: 'salsa',
-      five: 'sour cream',
-      six: 'guacamole',
-    }]
+    ingredients: ['flour tortillas','shredded cheese (e.g., cheddar, Monterey Jack)','cooked chicken, diced (optional)','salsa','sour cream','guacamole',]
   },
   {
     id: "8",
     name: "Sashimi",
     picture: require('../img/food-8.jpg'),
-    ingredients: [{
-      one: 'Raw',
-      two: 'fish',
-      three: 'soy',
-      four: 'sauce',
-      five: 'wasabi',
-    }]
+    ingredients: ['Raw','fish','soy','sauce','wasabi',]
   },
   {
     id: "9",
     name: "Steak",
     picture: require('../img/food-9.jpg'),
-    ingredients:[{
-      one: 'Beef',
-      two: 'seasoning',
-    }]
+    ingredients:['Beef','seasoning',]
   },
   {
     id: "10",
     name: "Tacos",
     picture: require('../img/food-10.jpg'),
-    ingredients:[{
-      one: 'Noodles',
-      two: 'meat',
-      three:'vegetables',
-      four: 'soy',
-      five: 'sauce',
-    }]
+    ingredients:[ 'Noodles', 'meat','vegetables', 'soy', 'sauce',
+    ]
   },
   {
     id: "11",
     name: "Japan Salmon",
     picture: require('../img/food-11.jpg'),
-    ingredients: [{
-      one: 'soft corn or flour tortillas',
-      two: 'white fish fillets (e.g., cod or tilapia)',
-      three: 'shrimp, peeled and deveined',
-      four: 'lime juice',
-      five: 'cilantro, chopped',
-      six: 'red cabbage, shredded',
-    }]
+    ingredients: ['soft corn or flour tortillas','white fish fillets (e.g., cod or tilapia)',
+ 'shrimp, peeled and deveined',
+'lime juice',
+ 'cilantro, chopped',
+ 'red cabbage, shredded',
+    ]
   }
 ]
 
