@@ -8,8 +8,8 @@ export interface FullDishes {
   id: string,
   name: string,
   picture: any,
-  ingredients: [];
-  portions: [];
+  ingredients: [] | any;
+  portions: [] | any;
 }
 
 // export interface Ingredients {
