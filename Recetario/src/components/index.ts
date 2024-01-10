@@ -4,6 +4,7 @@ import FabButtonComponent from './FabButtonComponent';
 import TextComponent from './TextComponent';
 import SearchInputComponent from './SearchInputComponent';
 import RowComponent from './RowComponent'
+import Ingredients from './Ingredients';
 
 export {
   ContainerComponent,
@@ -12,4 +13,5 @@ export {
   TextComponent,
   SearchInputComponent,
   RowComponent,
+  Ingredients,
 }
