@@ -6,6 +6,7 @@ import { ContainerComponent } from '.';
 import { DishesData } from '../data/DishesData'
 
 const Ingredients: React.FC<RecipeComponentProps> =({recipe}) => { 
+  
   return (
     <View>
       {/* Mapea dinámicamente los ingredientes y portions */}
