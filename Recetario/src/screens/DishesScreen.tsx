@@ -1,10 +1,17 @@
-import {View, Text, ImageBackground, StyleSheet} from 'react-native';
+import {
+  View,
+  Text,
+  ImageBackground,
+  StyleSheet,
+  Dimensions,
+  Platform,
+} from 'react-native';
 import React, {useState} from 'react';
 import {
   ContainerComponent,
   FabButtonComponent,
   RowComponent,
-  TextComponent
+  TextComponent,
 } from '../components';
 import {useNavigation} from '@react-navigation/native';
 import {StackScreenProps} from '@react-navigation/stack';
@@ -16,33 +23,53 @@ const DishesScreen = ({navigation, route}: Props): React.JSX.Element => {
   const navigator = useNavigation();
   const {simpleDishes: dishes} = route.params;
 
+  const {height: windowsHeight, width: windowsWidth} = Dimensions.get('window');
+
   return (
     <View style={{flex: 1}}>
       <ImageBackground
         source={dishes.picture}
         style={styles.image}
         imageStyle={{opacity: 0.4}}>
-        <FabButtonComponent
-          iconName="close-sharp"
-          iconSize={25}
-          onPress={() => navigator.goBack()}
-          pTop={30}
-          pLeft={20}
-        />
-        <FabButtonComponent
-          iconName="share-outline"
-          iconSize={24}
-          onPress={() => {}}
-          pRight={70}
-          pTop={30}
-        />
-        <FabButtonComponent
-          iconName="heart-outline"
-          iconSize={24}
-          onPress={() => {}}
-          pRight={20}
-          pTop={30}
-        />
+        {/* inicio buttons */}
+        <View
+          style={{
+            flexDirection: 'row',
+            alignContent: 'space-between',
+            width: '100%',
+            height: 20,
+            marginTop: 50,
+            paddingLeft: 5,
+            paddingRight: 5,
+          }}>
+          <View style={{width: '80%'}}>
+            <FabButtonComponent
+              iconName="close-sharp"
+              iconSize={25}
+              onPress={() => navigator.goBack()}
+              // pTop={30}
+              // pLeft={20}
+            />
+          </View>
+
+          <View style={{flexDirection: 'row', width: '100%'}}>
+            <FabButtonComponent
+              iconName="share-outline"
+              iconSize={24}
+              onPress={() => {}}
+              // pRight={70}
+              // pTop={30}
+            />
+            <FabButtonComponent
+              iconName="heart-outline"
+              iconSize={24}
+              onPress={() => {}}
+              // pRight={20}
+              // pTop={30}
+            />
+          </View>
+        </View>
+        {/* fin buttons */}
 
         <ContainerComponent styles={styles.titleContainer}>
           <TextComponent text="TREADING" font="400" size={25} color="white" />
@@ -69,37 +96,37 @@ const DishesScreen = ({navigation, route}: Props): React.JSX.Element => {
           color="white"
         />
 
-        <View>          
-            <View>
-              {dishes.ingredients?.map((ingredient, i) => (
+        <View>
+          <View>
+            {dishes.ingredients?.map((ingredient, i) => (
+              <View key={i}>
                 <View
-                  key={i}
-                  >
-                  <View style={{
+                  style={{
                     flexDirection: 'row',
                     flexWrap: 'wrap',
                     justifyContent: 'space-between',
                     paddingTop: 15,
-                    paddingLeft: 4
+                    paddingLeft: 4,
                   }}>
-                    <View >
-                      <Text style={{color: 'white'}}>{ingredient}</Text>
-                    </View>
-
-                    <View>
-                      <Text style={{color: 'white'}}>{dishes.portions[i]}</Text>
-                    </View>
+                  <View>
+                    <Text style={{color: 'white'}}>{ingredient}</Text>
                   </View>
-                  <View
-                    style={
-                      { borderBottomWidth: 1, borderBottomColor: '#303030', paddingTop: 15 }
-                      }
-                  />
-                </View>
-              ))}
-            </View>
-        </View>
 
+                  <View>
+                    <Text style={{color: 'white'}}>{dishes.portions[i]}</Text>
+                  </View>
+                </View>
+                <View
+                  style={{
+                    borderBottomWidth: 1,
+                    borderBottomColor: '#303030',
+                    paddingTop: 15,
+                  }}
+                />
+              </View>
+            ))}
+          </View>
+        </View>
       </ContainerComponent>
     </View>
   );
@@ -111,7 +138,7 @@ export const styles = StyleSheet.create({
     height: 370,
   },
   titleContainer: {
-    transform: [{translateY: +270}],
+    transform: [{translateY: +200}],
     padding: 4,
   },
 

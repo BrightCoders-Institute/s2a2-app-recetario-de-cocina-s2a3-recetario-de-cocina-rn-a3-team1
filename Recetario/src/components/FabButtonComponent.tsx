@@ -36,25 +36,24 @@ const FabButtonComponent = (props: Props) => {
   } = props;
 
   return (
-
     <View
-    style={{
-      ...stylesFab.fabButton,
-      backgroundColor: background ?? '',
-      bottom: pBottom,
-      right: pRight,
-      left: pLeft,
-      top: pTop,
-    }}>
+      style={{
+        ...stylesFab.fabButton,
+        backgroundColor: background ?? '',
+        bottom: pBottom,
+        right: pRight,
+        left: pLeft,
+        top: pTop,
+      }}>
       <TouchableOpacity activeOpacity={0.8} onPress={onPress}>
         <Icon
           name={iconName}
           color={iconColor ?? 'white'}
           size={iconSize ?? 25}
-          />
+        />
       </TouchableOpacity>
     </View>
-  )
+  );
 };
 
 export const stylesFab = StyleSheet.create({
@@ -66,9 +65,7 @@ export const stylesFab = StyleSheet.create({
     justifyContent: 'center',
     borderRadius: 100,
     zIndex: 100,
-    position: 'absolute',
-
-  }
+  },
 });
 
 export default FabButtonComponent;
