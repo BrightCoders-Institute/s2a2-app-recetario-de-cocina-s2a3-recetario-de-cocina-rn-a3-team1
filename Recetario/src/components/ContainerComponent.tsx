@@ -19,7 +19,6 @@ const ContainerComponent = (props: Props) => {
 
 export const stylesCont = StyleSheet.create({
   container: {
-    flex: 1,
     paddingHorizontal: 16,
   },
 });
