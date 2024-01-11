@@ -12,29 +12,9 @@ import {RootStackParams} from '../navigator/StackNav';
 
 interface Props extends StackScreenProps<RootStackParams, 'DishesScreen'> {}
 
-interface Recipe {
-  id: string;
-  name: string;
-  picture: String;
-  ingredients: string[];
-  portions: string[];
-}
-
 const DishesScreen = ({navigation, route}: Props): React.JSX.Element => {
   const navigator = useNavigation();
   const {simpleDishes: dishes} = route.params;
-
-  //  pruebas data
-  const recipes: Recipe[] = [
-    {
-      id: "1",
-      name: "Peperoni Pizza Pockets",
-      picture: require('../img/food-1.jpg'),
-      ingredients: ['puff pastry', 'peperoni', 'marinara sauce', 'mozzarella cheese', 'egg'],
-      portions: ['1 sheet', '15 slices', '1 cup', '1/2 cup', '1']
-    },
-    // Otras recetas...
-  ];
 
   return (
     <View style={{flex: 1}}>
@@ -82,39 +62,16 @@ const DishesScreen = ({navigation, route}: Props): React.JSX.Element => {
           size={20}
           color="white"
         />
-        {/* {
-              dishes.ingredients.map((ingredient) =>(
-                <>
-                <TextComponent key={dishes.id} styles={{padding: 4, marginTop: 10}} text={ingredient} size={17} color='white'/>
-                <View style={{width: '100%', height: 2, backgroundColor: '#303030'}}/>
-                </>
-                ))
+        <TextComponent
+          styles={{paddingLeft: 5, marginBottom: 10}}
+          text="for 3 servings"
+          size={17}
+          color="white"
+        />
 
-            } */}
-
-        {/* pruebas */}
-
-        {/* <ContainerComponent>
-                    {recipes.ingredients.map((ingredient, index) => (
-                      <View key={index} style={{flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'space-between'}}>
-                        <View >
-                          <Text>{ingredient}</Text>
-                        </View>
-                        <View >
-                          <Text>{dishes.portions[index]}</Text>
-                        </View>
-                        <View
-                          style={{width: '100%', height: 2, backgroundColor: '#303030'}}
-                        />
-                      </View>
-                    ))}
-                  </ContainerComponent> */}
-              
-              <View>
-          {recipes.map((recipe, index) => (
-            <View key={index}>
-              {/* Mapea dinámicamente los ingredientes y portions */}
-              {recipe.ingredients.map((ingredient, i) => (
+        <View>          
+            <View>
+              {dishes.ingredients?.map((ingredient, i) => (
                 <View
                   key={i}
                   >
@@ -122,7 +79,7 @@ const DishesScreen = ({navigation, route}: Props): React.JSX.Element => {
                     flexDirection: 'row',
                     flexWrap: 'wrap',
                     justifyContent: 'space-between',
-                    paddingTop: 10,
+                    paddingTop: 15,
                     paddingLeft: 4
                   }}>
                     <View >
@@ -130,17 +87,18 @@ const DishesScreen = ({navigation, route}: Props): React.JSX.Element => {
                     </View>
 
                     <View>
-                      <Text style={{color: 'white'}}>{recipe.portions[i]}</Text>
+                      <Text style={{color: 'white'}}>{dishes.portions[i]}</Text>
                     </View>
                   </View>
-                  <View style={{ borderBottomWidth: 1, borderBottomColor: 'black', paddingTop: 10 }} />
-                  
+                  <View
+                    style={
+                      { borderBottomWidth: 1, borderBottomColor: '#303030', paddingTop: 15 }
+                      }
+                  />
                 </View>
               ))}
             </View>
-          ))}
         </View>
-                  
 
       </ContainerComponent>
     </View>
